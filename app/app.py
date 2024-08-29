@@ -70,12 +70,11 @@ if uploaded_file is not None:
 
             st.session_state["download_ready"] = out_path
 
-# Render the download button if the video is ready to be downloaded
-if "download_ready" in st.session_state:
-    with open(st.session_state["download_ready"], "rb") as f:
-        st.download_button(
-            label="Download Annotated Video",
-            data=f,
-            file_name=os.path.basename(st.session_state["download_ready"]),
-            mime="video/avi"
-        )
+            # Render the download button if the video is ready to be downloaded
+            with open(out_path, "rb") as f:
+                st.download_button(
+                    label="Download Annotated Video",
+                    data=f,
+                    file_name=os.path.basename(out_path),
+                    mime="video/avi"
+                )
