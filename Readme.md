@@ -2,7 +2,7 @@ This project consists of training and UI portion of CCTV surveillance system whi
 
 It is better to have python 3.9 installed for better compatibility.
 
-To run this project, download the necesaary library, simply start the unicorn and then run streamlit
+To run this project, download the necesaary library, simply start the uvicorn and then run streamlit
 ```
 uvicorn main:app --reload
 streamlit run app.py 
